@@ -1,4 +1,4 @@
 # HTML_TOY
-things I did via LLFE school curriculum
+things I did along with LLFE school curriculum
 
-- https://beomjookim.github.io/HTML_TOY/
+generated github page @ https://beomjookim.github.io/HTML_TOY/
