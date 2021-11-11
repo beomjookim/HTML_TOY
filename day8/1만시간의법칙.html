@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1만 시간의 법칙!</title>
+    <style>
+        /* mobile first!! bootstrap이 대표적 */
+        body {
+            margin: 0;
+            background-color: tomato;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-sizing: border-box;
+            border: 10px solid red;
+            height: 500px;
+            width: 100%;
+            background-color: yellow;
+        }
+
+        .item {
+            margin: 50px;
+            width: 500px;
+            background-color: sienna;
+        }
+
+        /* max니 1000px 이상이라고 오해하기 쉽지만, 1000px 이하일때 작동, 그러니 1000px일때까지!라고 이해하는 것이 좋음 */
+        @media screen and (max-width:1000px) {
+            body {
+                background-color: green;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                box-sizing: border-box;
+                border: 10px solid red;
+                height: 800px;
+                width: 100%;
+                background-color: yellow;
+            }
+
+            .item {
+                margin: 50px;
+                width: 800px;
+                background-color: sienna;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            body {
+                background-color: violet;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ea illo eius architecto sed
+            qui, incidunt corporis labore! Nobis nemo consequuntur commodi pariatur iure saepe dolorum neque tempore
+            temporibus at!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ea illo eius architecto sed
+            qui, incidunt corporis labore! Nobis nemo consequuntur commodi pariatur iure saepe dolorum neque tempore
+            temporibus at!</div>
+    </div>
+</body>
+
+</html>
