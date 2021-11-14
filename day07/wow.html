@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body,
+        img,
+        div {
+            padding: 0;
+            margin: 0;
+        }
+
+        @keyframes seven {
+            from {
+                background-position: 0px, 0px;
+            }
+
+            to {
+                background-position: -3300px, 0;
+            }
+        }
+
+        .building7 {
+            width: 150px;
+            height: 180px;
+            background: url(./buildings/building7.png) no-repeat;
+            animation: seven 5s steps(22);
+            animation-fill-mode: forwards;
+            position: absolute;
+            top: 170px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div class="building7"></div>
+    </div>
+</body>
+
+</html>
