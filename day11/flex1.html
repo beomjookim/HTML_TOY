@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>flex-1</title>
+    <style>
+        .container-color {
+            background-color: #fff8dc;
+            border: solid 3px black;
+            border-radius: 10px;
+            /* height: 300px; */
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .item-color {
+            background-color: darkcyan;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container1 {
+            display: block;
+            /* display: inline; */
+            /* display: flex; */
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+        }
+
+        .container3 {
+            display: flex;
+            align-items: stretch;
+            /* align-items: baseline; */
+            /* align-items: center; */
+            /* align-items: flex-start; */
+        }
+
+        .container4 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container2:nth-child(3) {
+            display: flex;
+            flex-basis: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    display: flex
+    <div class="container-color container1">
+        <div class="item-color">Lorem.</div>
+        <div class="item-color">Lorem, ipsum.</div>
+        <div class="item-color">Lorem, ipsum dolor.</div>
+        <div class="item-color">Lorem ipsum dolor sit.</div>
+    </div>
+
+    justify-content:center or space-between
+    <div class="container-color container2">
+        <div class="item-color">Lorem.</div>
+        <div class="item-color">Lorem, ipsum.</div>
+        <div class="item-color">Lorem, ipsum dolor.</div>
+        <div class="item-color">Lorem ipsum dolor sit.</div>
+    </div>
+
+    align-items
+    <div class="container-color container3">
+        <div class="item-color">Lorem.</div>
+        <div class="item-color">Lorem, ipsum.</div>
+        <div class="item-color">Lorem, ipsum dolor.</div>
+        <div class="item-color">Lorem ipsum dolor sit.</div>
+    </div>
+
+    flex-direction
+    <div class="container-color container4">
+        <div class="item-color">Lorem.</div>
+        <div class="item-color">Lorem, ipsum.</div>
+        <div class="item-color">Lorem, ipsum dolor.</div>
+        <div class="item-color">Lorem ipsum dolor sit.</div>
+    </div>
+
+    flex-basis
+    <div class="container-color container5">
+        <div class="item-color">Lorem.</div>
+        <div class="item-color">Lorem, ipsum.</div>
+        <div class="item-color">Lorem, ipsum dolor.</div>
+        <div class="item-color">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+
+</html>
