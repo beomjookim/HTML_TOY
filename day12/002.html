@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>grid-1</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         .container-color {
             background-color: cornsilk;
             border: solid 3px black;
@@ -24,12 +28,12 @@
         }
 
         .container {
+            border: 10px solid black;
             display: grid;
-            /* grid-template-columns: 1fr 2.5fr 1fr; */
-            /* grid-template-rows: 1fr 2fr; */
-            /* grid-template-columns: repeat(6, 1fr); */
-            /* grid-template-rows: 200px 500px 200px; */
-            gap: 20px 30px;
+            gap: 10px;
+            grid-template-areas: 'header   header   header '
+                'section  section  aside'
+                'footer   footer   footer';
         }
 
         /* 
@@ -37,19 +41,35 @@
             그리드 셀 : 한 칸
             그리드 라인 : 셀 구분 선
         */
+
+        .header {
+            border: 10px solid tomato;
+            grid-area: header;
+        }
+
+        .section {
+            border: 10px solid blue;
+            grid-area: section;
+        }
+
+        .aside {
+            border: 10px solid darkred;
+            grid-area: aside;
+        }
+
+        .footer {
+            border: 10px solid deeppink;
+            grid-area: footer;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-color container">
-        <div class="item-color item">Lorem.</div>
-        <div class="item-color item">Lorem, ipsum.</div>
-        <div class="item-color item">Lorem, ipsum dolor.</div>
-        <div class="item-color item">Lorem ipsum dolor sit.</div>
-        <div class="item-color item">Lorem.</div>
-        <div class="item-color item">Lorem, ipsum.</div>
-        <div class="item-color item">Lorem, ipsum dolor.</div>
-        <div class="item-color item">Lorem ipsum dolor sit.</div>
+        <div class="item-color item header">Lorem.</div>
+        <div class="item-color item section">Lorem, ipsum.</div>
+        <div class="item-color item aside">Lorem, ipsum dolor.</div>
+        <div class="item-color item footer">Lorem ipsum dolor sit.</div>
     </div>
 </body>
 
