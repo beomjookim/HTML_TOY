@@ -1,0 +1,53 @@
+/* @keyframes object-rotate {
+    0% {
+        transform: rotateX(-10deg) rotateY(1turn) rotateZ(-10deg);
+    }
+    50% {
+        transform: rotateX(0deg) rotateY(0) rotateZ(0deg) scale(2);
+    }
+    100%{
+        transform: rotateX(-10deg) rotateY(-1turn) rotateZ(-10deg);
+    }
+} */
+
+@keyframes universal {
+    0% {transform: rotateY(0);}
+    100% {transform: rotateY(-1turn)/*scale(5)*/;}
+}
+
+body {
+    width: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+.container .scene {
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) rotateZ(10deg);
+}
+
+.circle {
+    transform-style: preserve-3d;
+    font-size: 50px;
+    font-weight: bold;
+    animation: universal 3s linear infinite;
+}
+.circle .word {
+    transform-style: preserve-3d;
+
+}
+.circle span {
+    position: absolute;
+    transform: rotateY(calc(var(--char-index)*12deg)) translateZ(250px);
+}
